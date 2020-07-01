@@ -1,3 +1,4 @@
+/* root criação de variavel global */
 :root {
     --primay-color: #fd951f;
     --bg-color:#130f0d;
@@ -19,8 +20,8 @@
      height: 100Vh;
      display: flex;
      flex-direction: column;
-     background-color: #130f0d;
-     color: #f0f0f5;
+     background-color: var(--bg-color);
+     color: var(--tex-color);
 
 
      justify-content: center;
