@@ -1,30 +1,88 @@
 /* root criação de variavel global */
 :root {
-    --primay-color: #fd951f;
-    --bg-color:#130f0d;
-    --tex-color: #f0f0f5;
-    --linght-color: rgba(255, 255, 255, 0.4);
-
+  --primay-color: #fd951f;
+  --bg-color: #130f0d;
+  --tex-color: #f0f0f5;
+  --linght-color: rgba(255, 255, 255, 0.4);
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- html{
-     font-family: "Roboto" sans-serif;
-     height: 100%;
- }
+html {
+  font-family: "Roboto" sans-serif;
+  height: 100%;
+}
 
- body {
-     height: 100Vh;
-     display: flex;
-     flex-direction: column;
-     background-color: var(--bg-color);
-     color: var(--tex-color);
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--tex-color);
 
+  justify-content: center;
+  align-items: center;
+}
+/* container do form */
+form {
+  background-color: rgba(255, 255, 255, 0.03);
+  
+  width: 100%;
+  max-width: 500px;
 
-     justify-content: center;
-     align-items: center;
+  margin: 30px auto;
+  padding: 32px 62px;
 
- }
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  margin-bottom: 32px;
+}
+
+div.input {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+input, button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  padding: 16px 0;
+
+  border: none;
+  border-bottom: 1px solid var(--primay-color);
+
+  background-color: transparent;
+
+  outline: none;
+
+  color: var(--tex-color);
+}
+button {
+    margin-top: 16px;
+    background-color: var(--primay-color);
+}
+/* (~) pegue o input e procure o irmão label */
+input ~ label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: .4s;
+}
+/* animação input */
+input:focus ~ label,
+input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
