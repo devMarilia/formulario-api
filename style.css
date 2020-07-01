@@ -1,0 +1,29 @@
+:root {
+    --primay-color: #fd951f;
+    --bg-color:#130f0d;
+    --tex-color: #f0f0f5;
+    --linght-color: rgba(255, 255, 255, 0.4);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html{
+     font-family: "Roboto" sans-serif;
+     height: 100%;
+ }
+
+ body {
+     height: 100Vh;
+     display: flex;
+     flex-direction: column;
+     background-color: #130f0d;
+     color: #f0f0f5;
+
+
+     justify-content: center;
+     align-items: center;
+
+ }
